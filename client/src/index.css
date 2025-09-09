@@ -47,25 +47,25 @@
 }
 
 .dark {
-  --background: hsl(225, 15%, 6%);
-  --foreground: hsl(240, 10%, 92%);
-  --card: hsl(225, 15%, 8%);
-  --card-foreground: hsl(240, 10%, 92%);
-  --popover: hsl(225, 15%, 8%);
-  --popover-foreground: hsl(240, 10%, 92%);
-  --primary: hsl(263, 70%, 60%);
+  --background: hsl(220, 25%, 2%);
+  --foreground: hsl(210, 20%, 95%);
+  --card: hsl(220, 20%, 4%);
+  --card-foreground: hsl(210, 15%, 92%);
+  --popover: hsl(220, 20%, 3%);
+  --popover-foreground: hsl(210, 15%, 90%);
+  --primary: hsl(263, 85%, 65%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(184, 77%, 45%);
+  --secondary: hsl(184, 90%, 50%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(225, 15%, 15%);
-  --muted-foreground: hsl(240, 5%, 65%);
-  --accent: hsl(45, 93%, 58%);
-  --accent-foreground: hsl(225, 15%, 6%);
-  --destructive: hsl(0, 84%, 60%);
+  --muted: hsl(220, 20%, 8%);
+  --muted-foreground: hsl(215, 15%, 60%);
+  --accent: hsl(45, 100%, 60%);
+  --accent-foreground: hsl(220, 25%, 2%);
+  --destructive: hsl(0, 90%, 65%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(225, 15%, 15%);
-  --input: hsl(225, 15%, 15%);
-  --ring: hsl(263, 70%, 60%);
+  --border: hsl(220, 20%, 12%);
+  --input: hsl(220, 20%, 10%);
+  --ring: hsl(263, 85%, 65%);
   --sidebar: hsl(228, 9.8039%, 10%);
   --sidebar-foreground: hsl(0, 0%, 85.0980%);
   --sidebar-primary: hsl(202.8169, 89.1213%, 53.1373%);
@@ -96,6 +96,11 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  .dark body {
+    background: radial-gradient(ellipse at top, hsl(220, 25%, 4%) 0%, hsl(220, 25%, 2%) 100%);
+    min-height: 100vh;
+  }
 }
 
 .gradient-bg {
@@ -109,8 +114,9 @@
 }
 
 .dark .glass-effect {
-  background: rgba(15, 15, 20, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(5, 8, 15, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
 }
 
 .mood-glow {
@@ -122,7 +128,7 @@
 }
 
 .dark .professional-shadow {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .hero-gradient {
@@ -146,7 +152,7 @@
 }
 
 .dark .recipe-card:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px hsl(var(--primary)/0.2);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px hsl(var(--primary)/0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .recipe-card-image {

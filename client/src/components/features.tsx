@@ -1,41 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Heart, User, Clock, Smartphone, Database } from "lucide-react";
+import { Brain, ChefHat, Clock } from "lucide-react";
 
 const features = [
   {
     icon: Brain,
-    title: "AI-Powered Intelligence",
-    description: "Advanced machine learning models analyze your facial expressions and text sentiment with 94% accuracy to understand your true mood.",
+    title: "AI Mood Detection",
+    description: "Advanced algorithms analyze facial expressions and text to understand your emotional state.",
     color: "bg-gradient-to-br from-primary/20 to-primary/10 text-primary",
   },
   {
-    icon: Heart,
-    title: "Emotional Well-being",
-    description: "Our recipes are scientifically selected to boost mood, reduce stress, and enhance emotional balance through food psychology.",
+    icon: ChefHat,
+    title: "Smart Recommendations",
+    description: "Get personalized recipes that match your current mood and energy levels.",
     color: "bg-secondary/10 text-secondary",
-  },
-  {
-    icon: User,
-    title: "Personalized Experience", 
-    description: "Learn your preferences over time and customize recommendations based on dietary restrictions and taste preferences.",
-    color: "bg-accent/10 text-accent",
   },
   {
     icon: Clock,
-    title: "Quick & Easy",
-    description: "Get mood analysis and recipe recommendations in under 3 seconds. Perfect for busy lifestyles and instant meal inspiration.",
-    color: "bg-primary/10 text-primary",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Optimized",
-    description: "Fully responsive design works perfectly on all devices. Take photos, analyze moods, and cook anywhere, anytime.",
-    color: "bg-secondary/10 text-secondary",
-  },
-  {
-    icon: Database,
-    title: "Rich Recipe Database",
-    description: "Over 10,000 carefully curated recipes from global cuisines, all tagged with mood-enhancing properties and nutritional benefits.",
+    title: "Instant Results",
+    description: "Mood analysis and recipe suggestions delivered in seconds.",
     color: "bg-accent/10 text-accent",
   },
 ];
@@ -46,8 +28,8 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">Why Choose Mood2Food?</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            More than just recipe recommendations - we understand the connection between food and emotions
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            AI-powered recipe recommendations based on your mood
           </p>
         </div>
 
