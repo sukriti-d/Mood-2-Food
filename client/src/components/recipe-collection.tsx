@@ -51,8 +51,8 @@ export default function RecipeCollection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">Recipe Collection</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Discover recipes organized by mood categories, each carefully selected to enhance your emotional well-being
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Recipes organized by your current mood
           </p>
         </div>
 

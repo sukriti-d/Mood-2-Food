@@ -255,6 +255,365 @@ export class MemStorage implements IStorage {
         },
         dietaryTags: ["vegetarian", "vegan", "gluten-free", "high-protein"],
         moodTags: ["energetic", "motivated", "focused"]
+      },
+      {
+        title: "Mediterranean Chickpea Salad",
+        description: "Fresh and vibrant salad perfect for sunny moods",
+        imageUrl: "https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 15,
+        difficulty: "easy",
+        cuisine: "mediterranean",
+        category: "lunch",
+        ingredients: [
+          "2 cans chickpeas, drained",
+          "1 cucumber, diced",
+          "1 cup cherry tomatoes, halved",
+          "1/2 red onion, thinly sliced",
+          "1/2 cup kalamata olives",
+          "1/2 cup feta cheese, crumbled",
+          "1/4 cup olive oil",
+          "2 tbsp lemon juice",
+          "1 tsp oregano",
+          "Fresh parsley"
+        ],
+        instructions: [
+          "Combine chickpeas, cucumber, tomatoes, and onion",
+          "Add olives and feta cheese",
+          "Whisk olive oil, lemon juice, and oregano",
+          "Toss salad with dressing",
+          "Garnish with fresh parsley",
+          "Serve immediately or chill"
+        ],
+        nutrition: {
+          calories: 290,
+          protein: 12,
+          carbs: 32,
+          fat: 14
+        },
+        dietaryTags: ["vegetarian", "gluten-free"],
+        moodTags: ["happy", "fresh", "energetic"]
+      },
+      {
+        title: "Spicy Lentil Curry",
+        description: "Warming and satisfying curry for when you need comfort",
+        imageUrl: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 45,
+        difficulty: "medium",
+        cuisine: "indian",
+        category: "dinner",
+        ingredients: [
+          "1 cup red lentils",
+          "1 onion, diced",
+          "3 cloves garlic, minced",
+          "1 tbsp ginger, minced",
+          "1 can coconut milk",
+          "1 can diced tomatoes",
+          "2 tsp curry powder",
+          "1 tsp turmeric",
+          "1 tsp cumin",
+          "Salt and pepper to taste",
+          "Fresh cilantro"
+        ],
+        instructions: [
+          "Rinse lentils and cook in water until tender",
+          "Sauté onion until golden",
+          "Add garlic, ginger, and spices",
+          "Add tomatoes and coconut milk",
+          "Stir in cooked lentils",
+          "Simmer for 15 minutes",
+          "Garnish with cilantro"
+        ],
+        nutrition: {
+          calories: 340,
+          protein: 18,
+          carbs: 45,
+          fat: 12
+        },
+        dietaryTags: ["vegetarian", "vegan", "gluten-free"],
+        moodTags: ["stressed", "comfort", "warming"]
+      },
+      {
+        title: "Green Goddess Smoothie",
+        description: "Nutrient-packed smoothie to energize your morning",
+        imageUrl: "https://images.unsplash.com/photo-1553779151-d6cb2c02b6b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 5,
+        difficulty: "easy",
+        cuisine: "healthy",
+        category: "breakfast",
+        ingredients: [
+          "1 banana",
+          "1 cup spinach",
+          "1/2 avocado",
+          "1 cup almond milk",
+          "1 tbsp almond butter",
+          "1 tsp honey",
+          "1/2 cup ice",
+          "1 tbsp chia seeds"
+        ],
+        instructions: [
+          "Add all ingredients to blender",
+          "Blend until smooth and creamy",
+          "Add more almond milk if needed",
+          "Pour into glass",
+          "Sprinkle with chia seeds"
+        ],
+        nutrition: {
+          calories: 285,
+          protein: 8,
+          carbs: 35,
+          fat: 15
+        },
+        dietaryTags: ["vegan", "gluten-free", "dairy-free"],
+        moodTags: ["energetic", "fresh", "motivated"]
+      },
+      {
+        title: "Classic Mac and Cheese",
+        description: "Ultimate comfort food for stressful days",
+        imageUrl: "https://images.unsplash.com/photo-1543826173-1ad4b5c50b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 25,
+        difficulty: "easy",
+        cuisine: "american",
+        category: "dinner",
+        ingredients: [
+          "1 lb elbow macaroni",
+          "4 tbsp butter",
+          "1/4 cup flour",
+          "2 cups milk",
+          "2 cups cheddar cheese, shredded",
+          "1/2 cup parmesan cheese",
+          "1/2 tsp salt",
+          "1/4 tsp pepper",
+          "1/4 tsp paprika"
+        ],
+        instructions: [
+          "Cook macaroni according to package directions",
+          "Melt butter in large saucepan",
+          "Whisk in flour, cook for 1 minute",
+          "Gradually add milk, whisk until smooth",
+          "Add cheeses and seasonings",
+          "Stir in cooked macaroni",
+          "Serve hot"
+        ],
+        nutrition: {
+          calories: 450,
+          protein: 20,
+          carbs: 55,
+          fat: 18
+        },
+        dietaryTags: ["vegetarian"],
+        moodTags: ["stressed", "comfort", "nostalgic"]
+      },
+      {
+        title: "Buddha Bowl",
+        description: "Balanced and nourishing bowl for inner peace",
+        imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 30,
+        difficulty: "easy",
+        cuisine: "healthy",
+        category: "lunch",
+        ingredients: [
+          "1 cup brown rice",
+          "1 sweet potato, cubed",
+          "1 cup broccoli",
+          "1 cup edamame",
+          "1 avocado, sliced",
+          "2 tbsp sesame seeds",
+          "2 tbsp tahini",
+          "1 tbsp soy sauce",
+          "1 tbsp rice vinegar",
+          "1 tsp sesame oil"
+        ],
+        instructions: [
+          "Cook brown rice",
+          "Roast sweet potato and broccoli",
+          "Steam edamame",
+          "Mix tahini, soy sauce, vinegar, and sesame oil",
+          "Arrange all ingredients in bowl",
+          "Drizzle with dressing",
+          "Sprinkle with sesame seeds"
+        ],
+        nutrition: {
+          calories: 420,
+          protein: 15,
+          carbs: 58,
+          fat: 16
+        },
+        dietaryTags: ["vegetarian", "vegan", "gluten-free"],
+        moodTags: ["calm", "balanced", "peaceful"]
+      },
+      {
+        title: "Chocolate Avocado Mousse",
+        description: "Guilt-free chocolate indulgence for happy moments",
+        imageUrl: "https://images.unsplash.com/photo-1551024739-98bcf4f2e5e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 10,
+        difficulty: "easy",
+        cuisine: "healthy",
+        category: "dessert",
+        ingredients: [
+          "2 ripe avocados",
+          "1/4 cup cocoa powder",
+          "1/4 cup maple syrup",
+          "2 tbsp almond milk",
+          "1 tsp vanilla extract",
+          "Pinch of salt",
+          "Fresh berries for topping"
+        ],
+        instructions: [
+          "Blend all ingredients until smooth",
+          "Taste and adjust sweetness",
+          "Chill for 2 hours",
+          "Serve in glasses",
+          "Top with fresh berries"
+        ],
+        nutrition: {
+          calories: 180,
+          protein: 4,
+          carbs: 22,
+          fat: 12
+        },
+        dietaryTags: ["vegan", "gluten-free", "dairy-free"],
+        moodTags: ["happy", "indulgent", "satisfied"]
+      },
+      {
+        title: "Miso Ramen Bowl",
+        description: "Warming and umami-rich noodles for comfort",
+        imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 35,
+        difficulty: "medium",
+        cuisine: "japanese",
+        category: "dinner",
+        ingredients: [
+          "2 packs ramen noodles",
+          "4 cups vegetable broth",
+          "3 tbsp miso paste",
+          "2 soft-boiled eggs",
+          "1 cup mushrooms, sliced",
+          "2 green onions, sliced",
+          "1 sheet nori, cut",
+          "1 tbsp sesame oil",
+          "1 tsp garlic, minced"
+        ],
+        instructions: [
+          "Cook ramen noodles according to package",
+          "Heat broth and whisk in miso paste",
+          "Sauté mushrooms until golden",
+          "Prepare soft-boiled eggs",
+          "Divide noodles between bowls",
+          "Pour hot miso broth over noodles",
+          "Top with eggs, mushrooms, green onions, and nori"
+        ],
+        nutrition: {
+          calories: 380,
+          protein: 16,
+          carbs: 48,
+          fat: 14
+        },
+        dietaryTags: ["vegetarian"],
+        moodTags: ["stressed", "comfort", "warming"]
+      },
+      {
+        title: "Acai Energy Bowl",
+        description: "Antioxidant-rich bowl to boost your energy",
+        imageUrl: "https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 10,
+        difficulty: "easy",
+        cuisine: "healthy",
+        category: "breakfast",
+        ingredients: [
+          "1 frozen acai packet",
+          "1/2 banana",
+          "1/2 cup blueberries",
+          "1/4 cup coconut milk",
+          "1 tbsp granola",
+          "1 tbsp coconut flakes",
+          "1 tbsp chia seeds",
+          "Fresh fruit for topping"
+        ],
+        instructions: [
+          "Blend acai, banana, and blueberries",
+          "Add coconut milk gradually",
+          "Pour into bowl",
+          "Top with granola and coconut flakes",
+          "Add fresh fruit and chia seeds",
+          "Serve immediately"
+        ],
+        nutrition: {
+          calories: 220,
+          protein: 6,
+          carbs: 42,
+          fat: 8
+        },
+        dietaryTags: ["vegan", "gluten-free", "dairy-free"],
+        moodTags: ["energetic", "happy", "fresh"]
+      },
+      {
+        title: "Herbal Tea Blend",
+        description: "Calming tea blend for relaxation and peace",
+        imageUrl: "https://images.unsplash.com/photo-1558618666-5a006271c560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 5,
+        difficulty: "easy",
+        cuisine: "herbal",
+        category: "beverage",
+        ingredients: [
+          "1 tsp chamomile",
+          "1 tsp lavender",
+          "1/2 tsp lemon balm",
+          "1/2 tsp passionflower",
+          "2 cups hot water",
+          "Honey to taste"
+        ],
+        instructions: [
+          "Mix all herbs in tea infuser",
+          "Pour hot water over herbs",
+          "Steep for 5-7 minutes",
+          "Remove infuser",
+          "Add honey if desired",
+          "Sip slowly and relax"
+        ],
+        nutrition: {
+          calories: 5,
+          protein: 0,
+          carbs: 1,
+          fat: 0
+        },
+        dietaryTags: ["vegan", "gluten-free", "caffeine-free"],
+        moodTags: ["calm", "relaxed", "peaceful"]
+      },
+      {
+        title: "Protein Power Pancakes",
+        description: "High-protein pancakes to fuel your workout",
+        imageUrl: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        cookTime: 15,
+        difficulty: "easy",
+        cuisine: "healthy",
+        category: "breakfast",
+        ingredients: [
+          "1 cup oats",
+          "1 banana",
+          "2 eggs",
+          "1/4 cup protein powder",
+          "1/2 cup milk",
+          "1 tsp baking powder",
+          "1 tsp vanilla",
+          "Berries for topping"
+        ],
+        instructions: [
+          "Blend oats into flour",
+          "Add banana, eggs, and milk",
+          "Mix in protein powder and baking powder",
+          "Heat pan over medium heat",
+          "Pour batter to form pancakes",
+          "Cook until bubbles form, then flip",
+          "Serve with berries"
+        ],
+        nutrition: {
+          calories: 350,
+          protein: 25,
+          carbs: 48,
+          fat: 8
+        },
+        dietaryTags: ["high-protein", "gluten-free"],
+        moodTags: ["energetic", "motivated", "focused"]
       }
     ];
 
