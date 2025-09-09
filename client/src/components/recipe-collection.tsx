@@ -47,11 +47,11 @@ export default function RecipeCollection() {
   });
 
   return (
-    <section className="py-20" id="recipes-section">
+    <section className="py-24 bg-gradient-to-br from-muted/10 via-background to-muted/20" id="recipes-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Recipe Collection</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">Recipe Collection</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover recipes organized by mood categories, each carefully selected to enhance your emotional well-being
           </p>
         </div>
@@ -94,10 +94,10 @@ export default function RecipeCollection() {
           </div>
         )}
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <Button 
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-8 py-3"
+            className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold px-10 py-4 rounded-full"
             data-testid="button-browse-all-recipes"
           >
             Browse All Recipes
