@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Mood2Food. All rights reserved. Made with ❤️ and AI.
+            © 2025 Mood2Food. All rights reserved. 
           </p>
           <div className="flex items-center space-x-6 text-sm text-muted-foreground mt-4 md:mt-0">
             <span>Built with MERN Stack</span>
