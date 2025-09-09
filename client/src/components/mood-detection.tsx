@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Camera, MessageCircle, Brain, X } from "lucide-react";
 import { analyzeImageMood, analyzeTextMood, MoodAnalysisResult } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
-import MoodResults from "./mood-results";
+import MoodResults from "@/components/mood-results";
 
 type DetectionMethod = 'camera' | 'text';
 
@@ -99,49 +99,50 @@ export default function MoodDetection({ onClose }: MoodDetectionProps) {
   }
 
   return (
-    <Card className="max-w-4xl mx-auto shadow-xl" data-testid="mood-detection-card">
-      <CardContent className="p-8">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold text-center text-foreground">
-            How are you feeling today?
+    <Card className="max-w-4xl mx-auto professional-shadow bg-card/95 backdrop-blur-sm border-0 rounded-3xl" data-testid="mood-detection-card">
+      <CardContent className="p-10">
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            AI Mood Detection
           </h2>
           <Button 
             variant="ghost" 
             size="icon" 
             onClick={onClose}
+            className="hover:bg-destructive/10 hover:text-destructive rounded-full transition-all duration-300"
             data-testid="button-close-mood-detection"
           >
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           </Button>
         </div>
         
         {/* Detection Method Tabs */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-muted rounded-xl p-1 flex">
+        <div className="flex justify-center mb-12">
+          <div className="bg-muted/50 rounded-2xl p-2 flex shadow-inner">
             <Button
-              variant={activeTab === 'camera' ? 'default' : 'ghost'}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+              variant="ghost"
+              className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === 'camera' 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-105' 
+                  : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
               }`}
               onClick={() => setActiveTab('camera')}
               data-testid="tab-camera"
             >
-              <Camera className="mr-2 h-4 w-4" />
+              <Camera className="mr-3 h-5 w-5" />
               Upload Selfie
             </Button>
             <Button
-              variant={activeTab === 'text' ? 'default' : 'ghost'}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+              variant="ghost"
+              className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === 'text' 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-105' 
+                  : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
               }`}
               onClick={() => setActiveTab('text')}
               data-testid="tab-text"
             >
-              <MessageCircle className="mr-2 h-4 w-4" />
+              <MessageCircle className="mr-3 h-5 w-5" />
               Describe Mood
             </Button>
           </div>
@@ -152,17 +153,17 @@ export default function MoodDetection({ onClose }: MoodDetectionProps) {
           <div className="text-center" data-testid="camera-interface">
             {!imagePreview ? (
               <div 
-                className="upload-zone bg-muted/30 rounded-2xl p-12 mb-6 cursor-pointer"
+                className="upload-zone bg-gradient-to-br from-muted/20 to-muted/10 rounded-3xl p-16 mb-8 cursor-pointer border-2 border-dashed border-muted-foreground/30 hover:border-primary/50 transition-all duration-500 group"
                 onClick={() => fileInputRef.current?.click()}
                 data-testid="upload-zone"
               >
-                <Camera className="mx-auto text-4xl text-muted-foreground mb-4 h-16 w-16" />
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Upload Your Selfie</h3>
-                <p className="text-muted-foreground mb-4">
-                  Our AI will analyze your facial expression to detect your mood
+                <Camera className="mx-auto text-muted-foreground mb-6 h-20 w-20 group-hover:text-primary transition-colors duration-300" />
+                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">Upload Your Selfie</h3>
+                <p className="text-muted-foreground mb-8 text-lg leading-relaxed max-w-md mx-auto">
+                  Our AI will analyze your facial expression to detect your mood with advanced computer vision
                 </p>
                 <Button 
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
+                  className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold px-8 py-3 rounded-full"
                   data-testid="button-choose-photo"
                 >
                   Choose Photo
@@ -177,26 +178,26 @@ export default function MoodDetection({ onClose }: MoodDetectionProps) {
                 />
               </div>
             ) : (
-              <div className="mb-6" data-testid="image-preview">
-                <div className="bg-card rounded-xl p-4 inline-block shadow-lg">
+              <div className="mb-8" data-testid="image-preview">
+                <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 inline-block professional-shadow border border-border/50">
                   <img 
                     src={imagePreview} 
                     alt="Preview" 
-                    className="w-48 h-48 object-cover rounded-lg mb-4"
+                    className="w-64 h-64 object-cover rounded-xl mb-6 shadow-lg"
                     data-testid="preview-image"
                   />
                   <Button
                     onClick={() => handleAnalyzeMood('camera')}
                     disabled={isLoading}
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium w-full"
+                    className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold w-full py-3 rounded-full"
                     data-testid="button-analyze-image"
                   >
                     {isLoading ? (
-                      <div className="loading-spinner mr-2" />
+                      <div className="loading-spinner mr-3" />
                     ) : (
-                      <Brain className="mr-2 h-4 w-4" />
+                      <Brain className="mr-3 h-5 w-5" />
                     )}
-                    {isLoading ? 'Analyzing...' : 'Analyze My Mood'}
+                    {isLoading ? 'Analyzing Your Mood...' : 'Analyze My Mood'}
                   </Button>
                 </div>
               </div>
@@ -211,30 +212,31 @@ export default function MoodDetection({ onClose }: MoodDetectionProps) {
               placeholder="Tell us how you're feeling today... (e.g., 'I'm feeling stressed after a long day at work' or 'I'm excited about the weekend!')"
               value={moodText}
               onChange={(e) => setMoodText(e.target.value)}
-              className="w-full h-32 p-4 border border-border rounded-xl bg-background text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full h-40 p-6 border border-border/50 rounded-2xl bg-background/50 backdrop-blur-sm text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300 text-lg"
               data-testid="mood-text-input"
             />
             <Button
               onClick={() => handleAnalyzeMood('text')}
               disabled={isLoading || !moodText.trim()}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium w-full mt-4"
+              className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold w-full mt-6 py-4 rounded-full text-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               data-testid="button-analyze-text"
             >
               {isLoading ? (
-                <div className="loading-spinner mr-2" />
+                <div className="loading-spinner mr-3" />
               ) : (
-                <Brain className="mr-2 h-4 w-4" />
+                <Brain className="mr-3 h-5 w-5" />
               )}
-              {isLoading ? 'Analyzing...' : 'Analyze My Mood'}
+              {isLoading ? 'Analyzing Your Mood...' : 'Analyze My Mood'}
             </Button>
           </div>
         )}
 
         {/* Loading State */}
         {isLoading && (
-          <div className="text-center py-8" data-testid="loading-state">
-            <div className="loading-spinner mx-auto mb-4" />
-            <p className="text-muted-foreground">Analyzing your mood with AI...</p>
+          <div className="text-center py-12 animate-fade-in" data-testid="loading-state">
+            <div className="loading-spinner mx-auto mb-6" />
+            <p className="text-muted-foreground text-lg">Analyzing your mood with AI...</p>
+            <p className="text-sm text-muted-foreground/80 mt-2">This may take a few seconds</p>
           </div>
         )}
       </CardContent>

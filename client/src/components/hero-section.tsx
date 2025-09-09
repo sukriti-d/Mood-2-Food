@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchRecipesByMood } from "@/lib/api";
 import RecipeCard from "@/components/recipe-card";
 import { Card, CardContent } from "@/components/ui/card";
+import MoodDetection from "@/components/mood-detection";
 
 const quickMoods = [
   { id: 'happy', name: 'Happy', icon: Smile, color: 'bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-600', emoji: '😊' },
@@ -129,18 +130,7 @@ export default function HeroSection() {
         
         {showMoodDetection && (
           <div id="mood-detection" className="mt-16">
-            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border-0">
-              <h3 className="text-2xl font-bold text-center mb-6">AI Mood Detection</h3>
-              <p className="text-center text-muted-foreground mb-8">Upload a selfie or describe your feelings for AI-powered mood analysis</p>
-              <Button 
-                onClick={() => setShowMoodDetection(false)}
-                variant="outline"
-                className="mb-4"
-              >
-                ← Back to Quick Selection
-              </Button>
-              {/* MoodDetection component would go here when import is fixed */}
-            </div>
+            <MoodDetection onClose={() => setShowMoodDetection(false)} />
           </div>
         )}
       </div>
